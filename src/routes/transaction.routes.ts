@@ -13,7 +13,6 @@ const transactionRouter = Router();
 
 const transactionsRepository = new TransactionsRepository();
 
-
 transactionRouter.get('/', (_, response) => {
   try {
     const transactions = transactionsRepository.all();
@@ -26,7 +25,8 @@ transactionRouter.get('/', (_, response) => {
   } catch (err) {
     return response.status(400).json({ error: err.message });
   }
-});
+}
+);
 
 transactionRouter.post('/', (request, response) => {
   try {
@@ -46,6 +46,7 @@ transactionRouter.post('/', (request, response) => {
   } catch (err) {
     return response.status(400).json({ error: err.message });
   }
-});
+}
+);
 
 export default transactionRouter;
