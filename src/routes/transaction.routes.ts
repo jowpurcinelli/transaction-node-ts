@@ -13,6 +13,7 @@ const transactionRouter = Router();
 
 const transactionsRepository = new TransactionsRepository();
 
+
 transactionRouter.get('/', (_, response) => {
   try {
     const transactions = transactionsRepository.all();
